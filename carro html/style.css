@@ -1,0 +1,89 @@
+.padre {
+    display: flex;
+    justify-content: center;
+
+}
+
+.fondo {
+
+    background: url(./fondo.jpg);
+    height: 200rem;
+    width: 500%;
+    background-size: cover;
+}
+
+.fondo_oculto{
+    animation: fondo-move 10s infinite linear;
+}
+
+.carro {
+    position: absolute;
+    width: 50rem;
+    top: 162rem;
+    right: 30rem;
+}
+
+.llanta1 {
+
+    position: absolute;
+    top: 173rem;
+    right: 32rem;
+    width: 15rem;
+
+}
+
+.llanta1_oculto{
+    animation: llantas-move 5s infinite linear;
+
+}
+
+.llanta2 {
+
+    position: absolute;
+    top: 173rem;
+    left: 81rem;
+    width: 15rem;
+}
+
+.llanta2_oculto{
+    animation: llantas-move 5s infinite linear;
+
+}
+
+.sprite {
+    position: absolute;
+    background: url(./sprite.png);
+    top: 150rem;
+    right: 80rem;
+    height: 920px;
+    width: 184px;
+}
+
+.oculto {
+    display: none;
+}
+
+.sprite_oculto{
+    animation: sprite-move 0.5s infinite steps(5);
+}
+
+@keyframes sprite-move{
+    100%{
+        background-position-x: 920px;
+    }
+}
+
+@keyframes fondo-move {
+    100% {
+        background-position-x: -10000px;
+
+    }
+}
+
+@keyframes llantas-move {
+    100% {
+
+        transform: rotate(360deg);
+
+    }
+}
